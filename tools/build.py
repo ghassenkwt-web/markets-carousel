@@ -48,8 +48,8 @@ slides.append(f"""
  <div class="top"><span class="pill">ملخص الأسواق اليومي</span><span>الأحد ٢٢ نوفمبر ٢٠٢٦</span></div>
  <div style="margin-top:170px;position:relative">
   <div style="font-size:42px;color:#FF5A67;font-weight:900;margin-bottom:26px">● أسبوع أحمر</div>
-  <h1 style="font-size:118px">أسوأ أسبوع<br>لوول ستريت<br><span class="gold">منذ أبريل ٢٠٢٥</span></h1>
-  <p style="font-size:44px;color:#B7C3DA;margin-top:48px;line-height:1.55;font-weight:400">S&amp;P 500 يدخل مرحلة التصحيح،<br>والذهب والبيتكوين ينزفون معه</p>
+  <h1 style="font-size:112px">الخوف يسيطر<br>على الأسواق<br><span class="gold">فهل هذه فرصة؟</span></h1>
+  <p style="font-size:44px;color:#B7C3DA;margin-top:48px;line-height:1.55;font-weight:400">S&amp;P 500 يخسر {L("8.6%")} في أسبوع،<br>وتعلّم اليوم كيف تحمي صفقاتك</p>
  </div>
  <div class="card" style="position:absolute;right:84px;left:84px;bottom:170px;padding:34px 44px;display:flex;justify-content:space-between;align-items:center">
   <div><div class="muted" style="font-size:28px">S&amp;P 500 خلال الأسبوع</div><div style="font-size:84px;font-weight:900" class="red">{L("−8.6%")}</div></div>
@@ -147,14 +147,14 @@ def rule(n, t, b):
 slides.append(f"""
 <section class="slide">
  <div class="top"><span class="pill">درس التداول</span><span>مفهوم اليوم</span></div>
- <h2 style="margin-top:50px">ما هو<br><em>التصحيح؟</em><div style="font-size:46px;color:#8FA0BC;font-weight:700;margin-top:6px">{L("Correction")}</div></h2>
+ <h2 style="margin-top:50px">ما هو<br><em>وقف الخسارة؟</em><div style="font-size:46px;color:#8FA0BC;font-weight:700;margin-top:6px">{L("Stop-Loss")}</div></h2>
  <div class="card" style="padding:34px 40px;margin-top:34px;position:relative">
-  <div style="font-size:35px;line-height:1.6">هبوط المؤشر <b class="gold">{L("10%")} أو أكثر</b> من أعلى قمة وصل لها.<br><span class="muted" style="font-size:30px">وإذا تعمّق الهبوط إلى {L("20%")} يسمّى سوقاً هابطة.</span></div>
+  <div style="font-size:35px;line-height:1.6">أمر تضعه مسبقاً <b class="gold">يغلق صفقتك تلقائياً</b> عند سعر تحدده.<br><span class="muted" style="font-size:30px">وقد لا يُنفّذ بنفس السعر تماماً إذا قفز السوق بفجوة.</span></div>
  </div>
  <div style="position:relative">
-  {rule("١","لا تلحق السكين الساقط","انتظر حتى يستقر السعر قبل الدخول.")}
-  {rule("٢","صغّر حجم الصفقة",f"عندما يتجاوز مؤشر {L('VIX')} الـ {L('30')} قلّل المخاطرة.")}
-  {rule("٣","حدّد وقف الخسارة قبل الدخول","اعرف أقصى خسارة تتحملها مسبقاً.")}
+  {rule("١","حدّده قبل الدخول","قرّر أقصى خسارة تتحملها قبل ما تفتح الصفقة.")}
+  {rule("٢","لا تحرّكه للأسفل","تحريكه بعد الخسارة يحوّل الخطة إلى أمل.")}
+  {rule("٣","اربطه بحجم الصفقة","خلّ الخسارة المحتملة نسبة صغيرة من رأس مالك.")}
  </div>
  {foot(6, "محتوى تعليمي")}
 </section>""")
@@ -163,8 +163,8 @@ slides.append(f"""
 slides.append(f"""
 <section class="slide">
  <div class="top"><span class="pill">وش رأيك؟</span><span>الأحد ٢٢ نوفمبر</span></div>
- <h1 style="font-size:104px;margin-top:150px">ارتداد قريب<br>ولا <span class="gold">هبوط أعمق؟</span></h1>
- <p style="font-size:44px;color:#B7C3DA;margin-top:48px;line-height:1.6;font-weight:400">اكتب توقعك في التعليقات،<br>وتابعنا لملخص الأسواق كل صباح.</p>
+ <h1 style="font-size:104px;margin-top:150px">وقف الخسارة:<br>هل <span class="gold">تستخدمه؟</span></h1>
+ <p style="font-size:44px;color:#B7C3DA;margin-top:48px;line-height:1.6;font-weight:400">قل لنا في التعليقات،<br>وتابعنا لملخص الأسواق كل صباح.</p>
  <div class="card" style="position:absolute;right:84px;left:84px;bottom:170px;padding:30px 40px">
   <div style="font-size:28px;color:#8FA0BC;line-height:1.7">⚠ المحتوى تعليمي ولا يُعد توصية استثمارية. التداول ينطوي على مخاطر وقد تخسر جزءاً من رأس مالك أو كله. الأرقام حتى إغلاق الجمعة ٢٠ نوفمبر وأسعار العملات الرقمية يوم السبت.</div>
  </div>
