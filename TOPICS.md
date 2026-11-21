@@ -5,3 +5,4 @@
 - 2026-11-22-fomo: FOMO trap lesson (new black+neon yellow style)
 - 2026-11-22-vix: VIX fear index jumps 20→37+ (news + education)
 - 2026-11-22-correction: correction vs bear market (S&P -11.6% from Oct 6 high), fusha + Latin digits
+- 2026-11-22-riskreward: risk/reward ratio lesson (educational, no market data)
