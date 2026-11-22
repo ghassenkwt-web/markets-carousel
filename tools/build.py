@@ -33,12 +33,14 @@ h2 em{font-style:normal;color:#F4B740}
 .dots i{width:14px;height:14px;border-radius:50%;background:#26324D;display:block}
 .dots i.on{background:#F4B740;width:38px;border-radius:8px}
 .card{background:linear-gradient(180deg,#141E34,#101830);border:2px solid #1F2C4A;border-radius:30px;position:relative}
+.brand{position:absolute;top:44px;left:50%;transform:translateX(-50%);font-size:34px;font-weight:900;letter-spacing:1px;color:#F4B740;display:flex;align-items:center;gap:6px}
+.brand i{width:10px;height:10px;border-radius:50%;background:#F4B740;display:inline-block;margin-top:14px}
 .note{font-size:30px;color:#8FA0BC;line-height:1.6;position:relative}
 """
 
 def foot(n, src="المصادر: " + '<span class="ltr" dir="ltr">Reuters · CNBC · CoinDesk · Trading Economics</span>'):
     dots = "".join(f'<i class="{"on" if i+1==n else ""}"></i>' for i in range(TOTAL))
-    return f'<div class="foot"><span>{src}</span><div class="dots">{dots}</div></div>'
+    return f'<div class="brand" dir="ltr">inflection<i></i></div><div class="foot"><span>{src}</span><div class="dots">{dots}</div></div>'
 
 slides = []
 
