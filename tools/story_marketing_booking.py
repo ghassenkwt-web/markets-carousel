@@ -68,10 +68,10 @@ def icon(kind,w=190):
     return _old_icon(kind,w)
 CAL='<svg viewBox="0 0 64 64" width="{w}" height="{w}"><rect x="7" y="12" width="50" height="45" rx="7" fill="none" stroke="currentColor" stroke-width="5"/><path d="M7 26h50M20 6v12M44 6v12" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M24 37l16 14M40 37L24 51" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>'
 S=[]
-S.append(f"""<section class="slide orange">{top("الخدمات")}
+S.append(f"""<section class="slide teal">{top("الخدمات")}
 <div class="big" style="left:40px;bottom:150px;opacity:.95;color:#1A0B3B">{CAL.format(w=520)}</div>
 <div style="margin-top:110px;position:relative;z-index:3">
-<h1 style="font-size:132px">عميلك مهتم…<br><span class="mark" style="background:#1A0B3B;color:#FFD84D">لكنه لم يحجز؟</span></h1>
+<h1 style="font-size:132px">عميلك مهتم…<br><span class="mark" style="background:#1A0B3B;color:#2DE2C4">لكنه لم يحجز؟</span></h1>
 <p style="font-size:46px;margin-top:40px;font-weight:800;line-height:1.5">4 أسباب شائعة<br>وكيف تعالجها</p></div>
 <div class="big" style="right:84px;bottom:130px;font-size:38px;font-weight:900;color:#1A0B3B">اسحب ←</div>{foot(1)}</section>""")
 S.append(f"""<section class="slide violet">{top("الفكرة الأساسية")}
