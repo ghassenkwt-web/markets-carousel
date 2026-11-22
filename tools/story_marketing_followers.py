@@ -68,7 +68,7 @@ S.append(f"""<section class="slide">{top("خطة عملية")}
 S.append(f"""<section class="slide">{top("شاركنا رأيك")}
 <h1 style="font-size:84px;margin-top:60px;line-height:1.25">ما أكبر عائق يمنع<br>متابعيك من <span class="o">الشراء؟</span></h1>
 <div style="margin-top:14px">{why("أ","غياب الثقة","")}{why("ب","السعر","")}{why("ج","عدم وضوح العرض","")}</div>
-<p style="font-size:36px;color:{T};margin-top:26px;font-weight:900">اكتب حرفك في التعليقات 👇</p>{foot(7)}</section>""")
+<p style="font-size:36px;color:{T};margin-top:26px;font-weight:900">أين تجد نفسك بين هذه الخيارات؟ 👇</p>{foot(7)}</section>""")
 html=f"<!doctype html><html lang='ar' dir='rtl'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(S)}</body></html>"
 (HERE/"story.html").write_text(html,encoding="utf-8")
 from playwright.sync_api import sync_playwright

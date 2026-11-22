@@ -29,7 +29,7 @@ def opt(l,t,c): return f'<div class="box" style="background:#fff;color:#1A0B3B;a
 S.append(f"""<section class="slide violet">{top("شاركنا رأيك")}
 <h1 style="font-size:100px;margin-top:60px">أي عنصر <span class="mark">ينقص</span><br>جملتك؟</h1>
 <div style="margin-top:16px">{opt("أ","الفئة المحددة","#FF8A3D")}{opt("ب","النتيجة","#7A35E8")}{opt("ج","الطريقة","#0FB59F")}{opt("د","الوضوح والبساطة","#E0187A")}</div>
-<p style="font-size:40px;color:#FFD84D;margin-top:34px;font-weight:900;position:relative;z-index:3">اكتب حرفك في التعليقات 👇</p>{foot(7)}</section>""")
+<p style="font-size:40px;color:#FFD84D;margin-top:34px;font-weight:900;position:relative;z-index:3">أين تجد نفسك بين هذه الخيارات؟ 👇</p>{foot(7)}</section>""")
 html=f"<!doctype html><html lang='ar' dir='rtl'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(S)}</body></html>"
 (HERE/"story_os.html").write_text(html,encoding="utf-8")
 from playwright.sync_api import sync_playwright

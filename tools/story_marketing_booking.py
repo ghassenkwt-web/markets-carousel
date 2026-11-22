@@ -87,7 +87,7 @@ def opt(l,t,c): return f'<div class="box" style="background:#fff;color:#1A0B3B;a
 S.append(f"""<section class="slide violet">{top("شاركنا رأيك")}
 <h1 style="font-size:100px;margin-top:60px">أي سبب <span class="mark">يمنع</span><br>حجوزاتك؟</h1>
 <div style="margin-top:16px">{opt("أ","غموض العرض","#FF8A3D")}{opt("ب","غياب الدليل","#7A35E8")}{opt("ج","السعر والقيمة","#0FB59F")}{opt("د","صعوبة الحجز","#FF4D6A")}</div>
-<p style="font-size:40px;color:#FFD84D;margin-top:34px;font-weight:900;position:relative;z-index:3">اكتب حرفك في التعليقات 👇</p>{foot(7)}</section>""")
+<p style="font-size:40px;color:#FFD84D;margin-top:34px;font-weight:900;position:relative;z-index:3">أين تجد نفسك بين هذه الخيارات؟ 👇</p>{foot(7)}</section>""")
 
 html=f"<!doctype html><html lang='ar' dir='rtl'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(S)}</body></html>"
 (HERE/"story.html").write_text(html,encoding="utf-8")
