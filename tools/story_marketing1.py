@@ -1,0 +1,80 @@
+
+import pathlib
+HERE=pathlib.Path(__file__).resolve().parent
+OUT=HERE/"out"; OUT.mkdir(exist_ok=True)
+FONTS="""@font-face{font-family:Cairo;font-weight:400;src:url(fonts/cairo-arabic-400-normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;font-weight:700;src:url(fonts/cairo-arabic-700-normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;font-weight:900;src:url(fonts/cairo-arabic-900-normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;font-weight:400;src:url(fonts/cairo-latin-400-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
+@font-face{font-family:Cairo;font-weight:700;src:url(fonts/cairo-latin-700-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
+@font-face{font-family:Cairo;font-weight:900;src:url(fonts/cairo-latin-900-normal.woff2);unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
+"""
+T="#2DE2C4"; O="#FF8A3D"; TX="#F4F1FF"; MU="#B9B0D6"
+css=FONTS+f"""
+*{{box-sizing:border-box;margin:0;padding:0}}
+body{{background:#222;font-family:Cairo,sans-serif;direction:rtl;color:{TX}}}
+.slide{{width:1080px;height:1350px;position:relative;overflow:hidden;padding:84px;display:block;background:radial-gradient(1000px 700px at 85% -5%,#3A1E6E 0%,#1B1033 45%,#0F0B1E 100%)}}
+.top{{display:flex;justify-content:space-between;align-items:center;font-size:28px;font-weight:700;color:{MU}}}
+.pill{{padding:10px 28px;border-radius:50px;font-size:28px;font-weight:900;background:rgba(45,226,196,.14);border:2px solid rgba(45,226,196,.5);color:{T}}}
+h1,h2{{font-weight:900;line-height:1.2}}
+h2{{font-size:84px}}
+.t{{color:{T}}} .o{{color:{O}}} .mu{{color:{MU}}}
+.card{{background:linear-gradient(135deg,#25173F,#1A1030);border:2px solid #3A2A5E;border-radius:34px;padding:34px 40px;margin-top:24px}}
+.ft{{position:absolute;left:84px;right:84px;bottom:56px;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:700;color:{MU}}}
+.dots{{display:flex;gap:10px;direction:ltr}} .dots i{{width:14px;height:14px;border-radius:50%;background:#43336B}} .dots i.on{{width:40px;border-radius:8px;background:{T}}}
+.num{{min-width:80px;height:80px;border-radius:50%;background:{T};color:#0F0B1E;font-size:50px;font-weight:900;display:flex;align-items:center;justify-content:center}}
+.bad{{border-color:#7A2F3C;background:linear-gradient(135deg,#34172A,#220F1E)}} .good{{border-color:#1F7A6A;background:linear-gradient(135deg,#123B3A,#0D2A2E)}}
+"""
+def foot(n,t="محتوى تعليمي"):
+    d="".join(f'<i class="{"on" if i==n else ""}"></i>' for i in range(1,8))
+    return f'<div class="ft"><span>{t}</span><div class="dots">{d}</div></div>'
+def top(tag,r="الأحد 22 نوفمبر 2026"): return f'<div class="top"><span class="pill">{tag}</span><span>{r}</span></div>'
+def why(n,t,b):
+    return f'<div class="card" style="display:flex;gap:28px;align-items:flex-start"><div class="num">{n}</div><div><div style="font-size:42px;font-weight:900;line-height:1.35">{t}</div><div style="font-size:30px;color:{MU};line-height:1.55;margin-top:8px">{b}</div></div></div>'
+def ba(lbl,txt,cls): 
+    return f'<div class="card {cls}"><div style="font-size:28px;font-weight:900;color:{"#FF7A8A" if cls=="bad" else T}">{lbl}</div><div style="font-size:38px;font-weight:900;line-height:1.5;margin-top:8px">{txt}</div></div>'
+S=[]
+S.append(f"""<section class="slide">{top("تسويق رقمي")}
+<div style="margin-top:150px"><div style="font-size:50px;color:{MU};font-weight:700">متابعون كثر…</div>
+<h1 style="font-size:130px;margin-top:10px">ومبيعات <span class="o">قليلة؟</span></h1>
+<p style="font-size:42px;margin-top:46px;line-height:1.6;color:{TX};font-weight:400">3 أسباب تجعل متابعيك لا يشترون، <br>وكيف تعالجها.</p></div>
+<div style="position:absolute;left:84px;bottom:130px;font-size:36px;font-weight:900;color:{T}">اسحب ←</div>{foot(1)}</section>""")
+S.append(f"""<section class="slide">{top("الفكرة الأساسية")}
+<h2 style="margin-top:80px">المتابعة <span class="t">قرار سهل</span><br>والشراء <span class="o">قرار صعب</span></h2>
+<div class="card" style="margin-top:50px;font-size:40px;line-height:1.7;font-weight:700">المتابعة لا تكلّف شيئاً، أما الشراء فيحتاج <span class="t">ثقة</span> و<span class="t">وضوحاً</span> و<span class="t">سبباً للتحرك الآن</span>.</div>
+<p style="font-size:34px;color:{MU};margin-top:36px;line-height:1.6">وهنا تضيع أغلب المبيعات.</p>{foot(2)}</section>""")
+S.append(f"""<section class="slide">{top("السبب الأول")}
+<h2 style="margin-top:60px">تتحدث عن نفسك<br><span class="o">لا عن مشكلة العميل</span></h2>
+{ba("بدلاً من","نحن أفضل شركة في مجالنا ولدينا خبرة طويلة.","bad")}
+{ba("اكتب","تتعب من إعلانات لا تجلب عملاء؟ إليك الحل.","good")}
+<p style="font-size:32px;color:{MU};margin-top:30px;line-height:1.6">العميل يهتم أولاً بمشكلته هو.</p>{foot(3)}</section>""")
+S.append(f"""<section class="slide">{top("السبب الثاني")}
+<h2 style="margin-top:60px">لا توجد <span class="o">دعوة واضحة</span><br>للتحرك</h2>
+{ba("بدلاً من","تواصل معنا إن أحببت.","bad")}
+{ba("اكتب","أرسل كلمة «عرض» في الرسائل لتحصل على دراسة مجانية لحسابك.","good")}
+<p style="font-size:32px;color:{MU};margin-top:30px;line-height:1.6">خطوة واحدة محددة أفضل من عدة خيارات.</p>{foot(4)}</section>""")
+S.append(f"""<section class="slide">{top("السبب الثالث")}
+<h2 style="margin-top:60px">لا تبني <span class="o">الثقة</span><br>قبل البيع</h2>
+{why("1","أدلّة حقيقية","تجارب عملاء، ونتائج قبل وبعد بموافقتهم.")}
+{why("2","ظهور متّسق","محتوى منتظم يعرّف الناس بخبرتك.")}
+{why("3","وعود واقعية","تجنّب الوعود المبالغ فيها لأنها تهدم الثقة.")}
+{foot(5)}</section>""")
+S.append(f"""<section class="slide">{top("خطة عملية")}
+<h2 style="margin-top:60px">ماذا تفعل<br><span class="t">غداً صباحاً؟</span></h2>
+{why("1","راجع آخر 5 منشورات","هل يبدأ كل منها بمشكلة العميل؟")}
+{why("2","أضف دعوة واحدة","جملة واضحة في نهاية كل منشور.")}
+{why("3","انشر دليلاً واحداً","شهادة عميل أو نتيجة موثّقة هذا الأسبوع.")}
+{foot(6)}</section>""")
+S.append(f"""<section class="slide">{top("شاركنا رأيك")}
+<h1 style="font-size:84px;margin-top:60px;line-height:1.25">ما أكبر عائق يمنع<br>متابعيك من <span class="o">الشراء؟</span></h1>
+<div style="margin-top:14px">{why("أ","غياب الثقة","")}{why("ب","السعر","")}{why("ج","عدم وضوح العرض","")}</div>
+<p style="font-size:36px;color:{T};margin-top:26px;font-weight:900">اكتب حرفك في التعليقات 👇</p>{foot(7)}</section>""")
+html=f"<!doctype html><html lang='ar' dir='rtl'><head><meta charset='utf-8'><style>{css}</style></head><body>{''.join(S)}</body></html>"
+(HERE/"story.html").write_text(html,encoding="utf-8")
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    b=p.chromium.launch(); pg=b.new_page(viewport={"width":1080,"height":1350})
+    pg.goto(f"file://{HERE}/story.html"); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(500)
+    for i,el in enumerate(pg.query_selector_all(".slide"),1): el.screenshot(path=str(OUT/f"slide-{i}.png"))
+    b.close()
+print("done")
