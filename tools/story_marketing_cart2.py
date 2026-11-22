@@ -41,7 +41,7 @@ h2{font-size:100px}
 def foot(n,t="محتوى تعليمي"):
     d="".join(f'<i class="{"on" if i==n else ""}"></i>' for i in range(1,8))
     return f'<div class="ft"><span>{t}</span><div class="dots">{d}</div></div>'
-def top(tag): return f'<div class="top"><span class="pill">{tag}</span><span>الأحد 22 نوفمبر 2026</span></div>'
+def top(tag): return f'<div class="top"><span class="pill">{tag}</span></div>'
 CART='<svg viewBox="0 0 64 64" width="{w}" height="{w}"><path d="M5 8h9l7 32h29l6-23H16" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="52" r="5" fill="currentColor"/><circle cx="46" cy="52" r="5" fill="currentColor"/></svg>'
 def icon(kind,w=190):
     p={"money":'<circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="5"/><text x="32" y="44" text-anchor="middle" font-size="34" font-weight="900" fill="currentColor" font-family="Cairo">$</text>',
