@@ -7,3 +7,4 @@
 - 2026-11-22-correction: correction vs bear market (S&P -11.6% from Oct 6 high), fusha + Latin digits
 - 2026-11-22-riskreward: risk/reward ratio lesson (educational, no market data)
 - 2026-11-22-quiz: self-test trader vs gambler (engagement quiz)
+- 2026-11-22-lossmath: رياضيات الخسارة — خسارة 50% تحتاج ربح 100% (تعليمي بلا أرقام سوق)
