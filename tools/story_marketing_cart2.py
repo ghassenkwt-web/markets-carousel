@@ -52,7 +52,7 @@ def icon(kind,w=190):
 def reason(theme,n,tag,head,ik,prob,sol,note):
     return f"""<section class="slide {theme}">{top(tag)}
 <div class="bignum">{n}</div>
-<div class="big" style="left:70px;top:200px;opacity:.9">{icon(ik,170)}</div>
+<div class="big" style="left:84px;bottom:150px;opacity:.95">{icon(ik,230)}</div>
 <h2 style="margin-top:70px">{head}</h2>
 <div class="box bad" style="margin-top:50px"><div class="ic">✕</div><div><div class="lab">المشكلة</div><div class="txt">{prob}</div></div></div>
 <div class="box good"><div class="ic">✓</div><div><div class="lab">الحل</div><div class="txt">{sol}</div></div></div>
