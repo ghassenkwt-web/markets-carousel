@@ -8,3 +8,4 @@
 - 2026-11-22-riskreward: risk/reward ratio lesson (educational, no market data)
 - 2026-11-22-quiz: self-test trader vs gambler (engagement quiz)
 - 2026-11-22-lossmath: رياضيات الخسارة — خسارة 50% تحتاج ربح 100% (تعليمي بلا أرقام سوق)
+- 2026-11-23-leverage: الرافعة المالية — حركة 1% ضدك برافعة 10x = خسارة 10% (تعليمي بلا أرقام سوق؛ أرقام السوق اليوم متضاربة)
